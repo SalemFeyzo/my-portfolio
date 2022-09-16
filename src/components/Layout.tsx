@@ -2,12 +2,10 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import Footer from "./Footer";
 import * as React from "react";
-import AppBar from "@mui/material/AppBar";
-import Toolbar from "@mui/material/Toolbar";
-import Typography from "@mui/material/Typography";
 import useScrollTrigger from "@mui/material/useScrollTrigger";
-import Box from "@mui/material/Box";
-import Container from "@mui/material/Container";
+import { Box, Container, Typography, Toolbar, AppBar } from "@mui/material";
+import { useTheme } from "next-themes";
+import ThemeUpdater from "./ThemeUpdater";
 
 interface Props {
   window?: () => Window;
@@ -16,6 +14,7 @@ interface Props {
 
 function ElevationScroll(props: Props) {
   const { children, window } = props;
+  const { theme, resolvedTheme, setTheme } = useTheme();
   // Note that you normally won't need to set the window ref as useScrollTrigger
   // will default to window.
   // This is only being set here because the demo is in an iframe.
@@ -38,11 +37,14 @@ const Layout = (props: Props) => {
         <title>FeyzoTech</title>
       </Head>
       <ElevationScroll {...props}>
-        <AppBar>
+        <AppBar sx={{}}>
           <Toolbar>
-            <Typography variant="h6" component="div">
-              Scroll to elevate App bar
-            </Typography>
+            <Box sx={{ flexGrow: 1 }}>
+              <Typography variant="h6" component="div" sx={{ mr: 2 }}>
+                Scroll to elevate App bar
+              </Typography>
+            </Box>
+            <ThemeUpdater />
           </Toolbar>
         </AppBar>
       </ElevationScroll>
