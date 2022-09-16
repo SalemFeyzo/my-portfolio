@@ -1,11 +1,11 @@
 import { FC, useEffect, useState } from "react";
-import { Button, css, IconButton, Icon } from "@mui/material";
+import { IconButton } from "@mui/material";
 import { useTheme } from "next-themes";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 
 const ThemeUpdater: FC<{}> = () => {
-  const { theme, resolvedTheme, setTheme } = useTheme();
+  const { resolvedTheme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
   // When mounted on client, now we can show the UI
@@ -22,15 +22,7 @@ const ThemeUpdater: FC<{}> = () => {
       color="inherit"
       onClick={() => setTheme(resolvedTheme === "light" ? "dark" : "light")}
     >
-      {resolvedTheme === "light" ? (
-        <Icon>
-          <DarkModeIcon />
-        </Icon>
-      ) : (
-        <Icon>
-          <LightModeIcon />
-        </Icon>
-      )}
+      {resolvedTheme === "light" ? <DarkModeIcon /> : <LightModeIcon />}
     </IconButton>
   );
 };

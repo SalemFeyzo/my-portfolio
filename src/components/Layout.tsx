@@ -37,7 +37,7 @@ const Layout = (props: Props) => {
         <title>FeyzoTech</title>
       </Head>
       <ElevationScroll {...props}>
-        <AppBar sx={{}}>
+        <AppBar color="default">
           <Toolbar>
             <Box sx={{ flexGrow: 1 }}>
               <Typography variant="h6" component="div" sx={{ mr: 2 }}>
