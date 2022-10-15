@@ -5,6 +5,7 @@ import Box from "@mui/material/Box";
 import Link from "../components/Link";
 import ProTip from "../components/ProTip";
 import HeroAnimation from "../components/HeroAnimation";
+import Ad from "../components/Ad";
 
 const Home: NextPage = () => {
   return (
@@ -18,6 +19,7 @@ const Home: NextPage = () => {
           alignItems: "center",
         }}
       >
+        <Ad />
         <Typography variant="h4" component="h1" gutterBottom>
           MUI v5 + Next.js with TypeScript example
         </Typography>
