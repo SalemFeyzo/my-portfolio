@@ -1,16 +1,13 @@
 import Head from "next/head";
-import { useRouter } from "next/router";
 import { Box, Container } from "@mui/material";
 import Footer from "./Footer";
 import Header from "./Header";
 
 interface Props {
-  window?: () => Window;
   children: React.ReactElement;
 }
 
 const Layout = (props: Props) => {
-  const router = useRouter();
   return (
     <>
       <Head>
