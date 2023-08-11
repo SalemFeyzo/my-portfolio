@@ -11,7 +11,7 @@ const ThemeUpdater: FC<{}> = () => {
   // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), []);
 
-  if (!mounted) return <div></div>;
+  if (!mounted) return null;
 
   return (
     <IconButton
