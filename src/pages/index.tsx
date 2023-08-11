@@ -2,8 +2,7 @@ import type { NextPage } from "next";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
-import Link from "../components/Link";
-import ProTip from "../components/ProTip";
+import Link from "next/link";
 
 const Home: NextPage = () => {
   return (
@@ -20,10 +19,9 @@ const Home: NextPage = () => {
         <Typography variant="h4" component="h1" gutterBottom>
           MUI v5 + Next.js with TypeScript example
         </Typography>
-        <Link href="/about" color="secondary">
+        <Link href="/about" color="inherit">
           Go to the about page
         </Link>
-        <ProTip />
       </Box>
     </Container>
   );
