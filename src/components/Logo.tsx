@@ -8,8 +8,6 @@ const Logo = () => {
       <Image src="/logo.svg" alt="Feyzo.tech" width={40} height={40} />
       <Typography
         variant="h6"
-        noWrap
-        component="div"
         sx={{
           display: { xs: "none", md: "block" },
           mx: "5px",

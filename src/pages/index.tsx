@@ -4,7 +4,6 @@ import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Link from "../components/Link";
 import ProTip from "../components/ProTip";
-import HeroAnimation from "../components/HeroAnimation";
 
 const Home: NextPage = () => {
   return (
@@ -21,7 +20,6 @@ const Home: NextPage = () => {
         <Typography variant="h4" component="h1" gutterBottom>
           MUI v5 + Next.js with TypeScript example
         </Typography>
-        <HeroAnimation />
         <Link href="/about" color="secondary">
           Go to the about page
         </Link>
