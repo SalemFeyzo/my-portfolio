@@ -5,7 +5,7 @@ import Image from "next/image";
 const Logo = () => {
   return (
     <Button variant="text" LinkComponent={Link} href="/">
-      <Image src="/logo.svg" alt="Feyzo.tech" width={40} height={40} />
+      <Image src="/logo.svg" alt="Feyzo.tech" width={50} height={40} />
       <Typography
         variant="h6"
         sx={{

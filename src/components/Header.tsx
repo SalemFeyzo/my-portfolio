@@ -80,7 +80,7 @@ const Header = (props: HeaderProps) => {
           sx={{ bgcolor: resolvedTheme === "light" ? "white" : "" }}
         >
           <Container maxWidth="xl">
-            <Toolbar disableGutters>
+            <Toolbar>
               <Box
                 sx={{
                   mr: 2,
@@ -156,7 +156,7 @@ const Header = (props: HeaderProps) => {
                 ))}
               </Box>
               <Box sx={{ flexGrow: 0 }}>
-                <Tooltip title="Update Theme">
+                <Tooltip title="theme">
                   <ThemeUpdater />
                 </Tooltip>
               </Box>

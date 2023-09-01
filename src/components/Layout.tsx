@@ -15,7 +15,9 @@ const Layout = (props: Props) => {
       </Head>
       <Header />
       <Container>
-        <Box sx={{ my: 2 }}>{props.children}</Box>
+        <Box component="main" sx={{ my: 2, height: "100vh" }}>
+          {props.children}
+        </Box>
       </Container>
       <Footer />
     </>
